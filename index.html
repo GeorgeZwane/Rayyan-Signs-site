@@ -584,10 +584,10 @@ function sendM() {
   const templateID = "template_miyoi8h";
 
   // Validate form fields
-  if (!name || !email || !phonenumber || !message) {
-    alert("Please fill in all fields before submitting.");
-    return; // Stop the function if any field is empty
-  }
+  //if (!name || !email || !phonenumber || !message) {
+    //alert("Please fill in all fields before submitting.");
+   // return; // Stop the function if any field is empty
+ // }
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
