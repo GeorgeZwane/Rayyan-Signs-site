@@ -397,52 +397,58 @@
                      <div class="row">
                         <div class="col-md-12">
                            
+                       
+                              <h1 class="testimonial_taital">Get in touch</h1>
+                         <br>
+                         <br>
+                         <br>
+
                            <form action="">
-                              <h1 class="contact_taital">Get In Touch</h1>
-                              <div style="padding: 20px; background-color: #fff; border: 1px solid #dee2e6; border-radius: 5px; max-width: 600px; margin: 20px auto;">
+                             
+                              <div style="padding: 20px; background-color: transparent; border: 1px solid #dee2e6; border-radius: 5px; max-width: 600px; margin: 20px auto;">
                                 <div class="container">
                                   <div class="row">
                                     <div class="form-group" style="margin-bottom: 15px;">
-                                      <label for="name" style="font-weight: bold; font-size: 1.1em; color: #333;">Name</label>
+                                      <label for="name" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Name</label>
                                       <input
                                         type="text"
                                         class="form-control"
                                         id="name"
                                         placeholder="Enter name"
-                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        style="width: 100%; padding: 10px; border: 1px solid yellowgreen; border-radius: 4px; font-size: 1em;"
                                         required
                                       />
                                     </div>
                                     <div class="form-group" style="margin-bottom: 15px;">
-                                      <label for="email" style="font-weight: bold; font-size: 1.1em; color: #333;">Email</label>
+                                      <label for="email" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Email</label>
                                       <input
                                         type="email"
                                         class="form-control"
                                         id="email"
                                         placeholder="Enter email"
-                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        style="width: 100%; padding: 10px; border: 1px solid yellowgreen; border-radius: 4px; font-size: 1em;"
                                         required
                                       />
                                     </div>
                                     <div class="form-group" style="margin-bottom: 15px;">
-                                      <label for="phonenumber" style="font-weight: bold; font-size: 1.1em; color: #333;">Phone Number</label>
+                                      <label for="phonenumber" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Phone Number</label>
                                       <input
                                         type="text"
                                         class="form-control"
                                         id="phonenumber"
                                         placeholder="Enter Phone Number"
-                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        style="width: 100%; padding: 10px; border: 1px solid yellowgreen; border-radius: 4px; font-size: 1em;"
                                         required
                                       />
                                     </div>
                                     <div class="form-group" style="margin-bottom: 15px;">
-                                      <label for="message" style="font-weight: bold; font-size: 1.1em; color: #333;">Message</label>
+                                      <label for="message" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Message</label>
                                       <textarea
                                         class="form-control"
                                         id="message"
                                         rows="3"
                                         placeholder="Enter your message"
-                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        style="width: 100%; padding: 10px; border: 1px solid yellowgreen; border-radius: 4px; font-size: 1em;"
                                         required
                                       ></textarea>
                                     </div>
@@ -584,10 +590,10 @@ function sendM() {
   const templateID = "template_miyoi8h";
 
   // Validate form fields
-  //if (!name || !email || !phonenumber || !message) {
-    //alert("Please fill in all fields before submitting.");
-   // return; // Stop the function if any field is empty
- // }
+  if (!name || !email || !phonenumber || !message) {
+    alert("Please fill in all fields before submitting.");
+    return; // Stop the function if any field is empty
+  }
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
