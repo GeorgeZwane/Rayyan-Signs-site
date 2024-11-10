@@ -32,6 +32,14 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+ 
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+          (function() {
+              emailjs.init("L6YEzaFfUzQDa5JAL");  // Replace with your EmailJS Public Key
+          })();
+      </script>
+ 
    </head>
    <body>
       <!-- header section start -->
@@ -45,7 +53,7 @@
                      <a href="index.html">Home</a>
                      <a href="service.html">Services</a>
                      <a href="shop.html">Pricelist</a>
-                     <a href="contact.html">Contacts</a>
+                     <a href="contacts.html">Contacts</a>
                   </div>
                   <form class="form-inline ">
                      <div class="login_text"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : 071 949 4727 </span></a></div>
@@ -93,14 +101,72 @@
                   <div class="contact_section_2">
                      <div class="row">
                         <div class="col-md-12">
-                           <h1 class="contact_taital">Get In Touch</h1>
+
+                          
+                              <h1 class="testimonial_taital">Get in touch</h1>
+                              <br>
+                              <br>
+                              <br>
+                             
                            <form action="">
-                              <div class="mail_section_1">
-                                 <input type="text" class="mail_text" placeholder="Name" name="Name">
-                                 <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number"> 
-                                 <input type="text" class="mail_text" placeholder="Email" name="Email">
-                                 <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                                 <div class="send_bt"><a href="#">SEND</a></div>
+                              
+                              <div style="padding: 20px; background-color: transparent; border: 1px solid #dee2e6; border-radius: 5px; max-width: 600px; margin: 20px auto;">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                      <label for="name" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Name</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="name"
+                                        placeholder="Enter name"
+                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        required
+                                      />
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                      <label for="email" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Email</label>
+                                      <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Enter email"
+                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        required
+                                      />
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                      <label for="phonenumber" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;">Phone Number</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="phonenumber"
+                                        placeholder="Enter Phone Number"
+                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        required
+                                      />
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 15px;">
+                                      <label for="message" style="font-weight: bold; font-size: 1.1em; color: yellowgreen;;">Message</label>
+                                      <textarea
+                                        class="form-control"
+                                        id="message"
+                                        rows="3"
+                                        placeholder="Enter your message"
+                                        style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 1em;"
+                                        required
+                                      ></textarea>
+                                    </div>
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary"
+                                      onclick="sendM()"
+                                      style="padding: 10px 20px; background-color: #007bff; border: none; color: white; font-size: 1em; border-radius: 4px; cursor: pointer;"
+                                    >
+                                      Submit
+                                    </button>
+                                  </div>
+                                </div>
                               </div>
                            </form>
                         </div>
@@ -110,66 +176,82 @@
                </div>
             </div>
             <!-- contact section end -->
-            <!-- footer section start -->
-            <div class="footer_section">
-               <div class="container">
-                  <div class="footer_sectio_2">
-                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                           <h2 class="footer_logo">Foodfinda</h2>
-                           <p class="footer_text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of </p>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                           <h2 class="useful_text">Navigation</h2>
-                           <div class="footer_menu">
-                              <ul>
-                                 <li class="active"><a href="index.html">Home</a></li>
-                                 <li><a href="about.html">About</a></li>
-                                 <li><a href="location.html">Location</a></li>
-                                 <li><a href="service.html">Services</a></li>
-                                 <li><a href="features.html">Features</a></li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                           <h2 class="useful_text">Contact Info</h2>
-                           <p class="address_text">Office Address</p>
-                           <div class="map_icon"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left15">Loram ipusm New York, NY 36524</span></a></div>
-                           <p class="address_text">Customer Service:</p>
-                           <div class="map_icon"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left15">( +01 1234567890 )</span></a></div>
-                           <div class="map_icon"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left15">demo@gmail.com</span></a></div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                           <h2 class="useful_text">Discover</h2>
-                           <div class="subscribe_menu">
-                              <ul>
-                                 <li><a href="contact.html">Contact Us</a></li>
-                              </ul>
-                           </div>
-                           <div class="social_icon">
-                              <ul>
-                                 <li><a href="https://www.facebook.com/RayyanSigns"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                 <li><a href="https://x.com/RayyanSigns"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>                            
-                                 <li><a href="https://www.instagram.com/RayyanSigns/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <!-- footer section start -->
+    <div class="footer_section">
+      <div class="container">
+         <div class="footer_sectio_2">
+            <div class="row">
+               <div class="col-lg-3 col-md-6">
+                  <h2 class="footer_logo">Our Services</h2>
+                  <p class="footer_text">SIGN BOARDS
+                     PVC BANNERS
+                     LIGHT BOXES
+                     BILLBOARD SIGNS
+                     PULL UP BANNER
+                     X - BANNER
+                     FLAGS / GAZEBO
+                     VEHICLE SIGNAGE
+                     MAGNET STICKERS
+                     T - SHIRT PRINT
+                     MUG PRINT
+                     POSTERS
+                     CUT OUT STICKERS
+                     FLYERS
+                     BUSINESS CARDS </p>
+               </div>
+               <div class="col-lg-3 col-md-6">
+                  <h2 class="useful_text">Navigation</h2>
+                  <div class="footer_menu">
+                     <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="shop.html">Pricelist</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6">
+                  <p class="address_text">Office Address 1</p>
+                  <div class="map_icon"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left15">95 Church St, Mayfair, Johannesburg, 2108</span></a></div>
+                  <p class="address_text">Office Address 2</p>
+                  <div class="map_icon"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left15">33 Albertina Sisulu Rd, Mayfair, Johannesburg, 2108</span></a></div>
+                  
+                  <p class="address_text">Customer Service:</p>
+                  <div class="map_icon"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left15">(  071 949 4727 | 074 078 1104 )</span></a></div>
+                  <div class="map_icon"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left15">info@rsigns.co.za</span></a></div>
+                </div>
+               <div class="col-lg-3 col-md-6">
+                  <h2 class="useful_text">Discover</h2>
+                  <div class="subscribe_menu">
+                     <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                     </ul>
+                  </div>
+                  <div class="social_icon">
+                     <ul>
+                        <li><a href="https://www.facebook.com/RayyanSigns"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://x.com/RayyanSigns"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>                            
+                        <li><a href="https://www.instagram.com/RayyanSigns/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
+                     </ul>
                   </div>
                </div>
             </div>
-            <!-- footer section end -->
+         </div>
+      </div>
+   </div>
+   <!-- footer section end -->
          </div>
       </div>
       <!-- layout main section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-         </div>
+     <!-- copyright section start -->
+     <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">2024 All Rights Reserved. Rayyan Signs.</p>
       </div>
-      <!-- copyright section end -->
+   </div>
+   <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
@@ -191,6 +273,37 @@
          function closeNav() {
            document.getElementById("mySidenav").style.width = "0";
          }
+
+         function sendM() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phonenumber: document.getElementById("phonenumber").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_zf2kvt8";
+  const templateID = "template_miyoi8h";
+
+  // Validate form fields
+  //if (!name || !email || !phonenumber || !message) {
+    //alert("Please fill in all fields before submitting.");
+    //return; // Stop the function if any field is empty
+  //}
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
+
       </script> 
    </body>
-</html>
+         </html>
